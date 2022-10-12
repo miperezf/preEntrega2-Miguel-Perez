@@ -73,8 +73,6 @@ const divisasDB = [
   },
 ];
 
-
-
 const solicitarDatos = () => {
   const opciones = [];
   let divisa1 = prompt("Escriba la divisa origen:").toLowerCase();
@@ -87,35 +85,30 @@ const solicitarDatos = () => {
   return opciones; //[divisa1, divisa2, cantidad]
 };
 
-
 const convert = (datosConvert) => {
-  const nombreDivisa = (divisasDB.find((x) => x.nombre == datosConvert[0])) || (divisasDB.find((e) => e.symbol == datosConvert[0]));
+  const nombreDivisa =
+    divisasDB.find((x) => x.nombre == datosConvert[0]) ||
+    divisasDB.find((e) => e.symbol == datosConvert[0]);
   if (nombreDivisa) {
     for (const key in nombreDivisa.tipoCambio) {
       if (key == datosConvert[1]) {
         const totalConvert = nombreDivisa.tipoCambio[key] * datosConvert[2];
-        alert(`la cantidad de ${datosConvert[0]} es igual a ${totalConvert}`)
+        alert(`la cantidad de ${datosConvert[0]} es igual a ${totalConvert}`);
       }
     }
   }
 };
 
-
-
-let repetir = false
+let repetir = false;
 do {
   const datosConvert = solicitarDatos();
-  convert(datosConvert)
-  const respuesta = prompt("Desea realizar otra conversion?\n1 - Si\n2 - No")
-  if (respuesta === '1') {
+  convert(datosConvert);
+  const respuesta = prompt("Desea realizar otra conversion?\n1 - Si\n2 - No");
+  if (respuesta === "1") {
     repetir = true;
   } else {
     repetir = false;
   }
-} while (repetir)
+} while (repetir);
 
-
-
-
-
-
+function
