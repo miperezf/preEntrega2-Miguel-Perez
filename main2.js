@@ -75,20 +75,19 @@ const divisasDB = [
 
 const solicitarDatos = () => {
   const opciones = [];
-  let divisa1 = prompt("Escriba la divisa origen:").toLowerCase();
-  let divisa2 = prompt("Escriba la divisa destino:").toLowerCase();
-  let cantidad = parseFloat(prompt("Ingrese cantidad:"));
+  const divisa1 = prompt("Escriba la divisa origen:").toLowerCase();
+  const divisa2 = prompt("Escriba la divisa destino:").toLowerCase();
+  const cantidad = parseFloat(prompt("Ingrese cantidad:"));
   opciones.push(divisa1);
   opciones.push(divisa2);
   opciones.push(cantidad);
 
-  return opciones; //[divisa1, divisa2, cantidad]
+  return opciones; // [divisa1, divisa2, cantidad]
 };
 
 const convert = (datosConvert) => {
-  const nombreDivisa =
-    divisasDB.find((x) => x.nombre == datosConvert[0]) ||
-    divisasDB.find((e) => e.symbol == datosConvert[0]);
+  const nombreDivisa = divisasDB.find((x) => x.nombre == datosConvert[0])
+    || divisasDB.find((e) => e.symbol == datosConvert[0]);
   if (nombreDivisa) {
     for (const key in nombreDivisa.tipoCambio) {
       if (key == datosConvert[1]) {
@@ -110,5 +109,3 @@ do {
     repetir = false;
   }
 } while (repetir);
-
-function
