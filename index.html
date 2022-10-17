@@ -55,46 +55,57 @@
       <p>Check live foreign currency exchange rates</p>
     </div>
   </div>
-  <div class="converter__panel">
-    <div class="tab__box">
-      <a href="">
-        <img src="https://img.icons8.com/ios-glyphs/30/000000/currency-exchange.png" />
-        Convertir
-      </a>
-      <a href="">
-        <img src="https://img.icons8.com/ios-glyphs/30/000000/filled-sent.png" />
-        Envio de Dinero</a>
-      <a href="">
-        <img src="https://img.icons8.com/ios/30/000000/pivot-table.png" />
-        Tabla de Cambios</a>
-
+  <div class="center__panel">
+    <div class="converter__panel">
+      <div class="tab__box">
+        <a href="">
+          <img src="https://img.icons8.com/ios-glyphs/30/000000/currency-exchange.png" />
+          Convertir
+        </a>
+        <a href="">
+          <img src="https://img.icons8.com/ios-glyphs/30/000000/filled-sent.png" />
+          Envio de Dinero</a>
+        <a href="">
+          <img src="https://img.icons8.com/ios/30/000000/pivot-table.png" />
+          Tabla de Cambios</a>
+      </div>
+      <main class="main1">
+        <form class="formulario__divisa">
+          <div class="divisa__cantidad">
+            <label for="cantidad">Amount:</label>
+            <div>
+              <div class="input-group mb-1">
+                <span class="input-group-text" id="inputGroup-sizing-default">$</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+              
+            </div>
+          </div>
+          <div class="divisa__origen">
+            <label for="origen">From:</label>
+            <div>
+              <select class="form-select" aria-label="Default select example">
+                <option disabled selected>Select an option</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div class="divisa__destino">
+            <label for="destino">To:</label>
+            <div>
+              <select class="form-select" aria-label="Default select example">
+                <option disabled selected>Select an option</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <button type="submit" class="btn btn-light button__amount" id="button_amount">convert</button>
+        </form>
+      </main>
     </div>
-    <main class="main1">
-      <form class="formulario__divisa">
-        <div class="divisa__cantidad">
-          <label for="cantidad">Amount:</label>
-          <div>
-            <span class="valor__cantidad"></span>
-            <span class="valor__simbolo">
-              <input type="text" inputmode="decimal" autocomplete="off" value="">
-            </span>
-          </div>
-        </div>
-        <div class="divisa__origen">
-          <label for="origen">From:</label>
-          <div>
-            <input type="text" inputmode="decimal" autocomplete="off" value="">
-            </span>
-          </div>
-        </div>
-        <div class="divisa__destino">
-          <label for="destino">To:</label>
-          <div>
-            <input type="text" inputmode="decimal" autocomplete="off" value="">
-            </span>
-      </form>
-    </main>
-  </div>
+    </div>
   </div>
   <!-- Remove the container if you want to extend the Footer to full width. -->
   <footer class="bg-dark text-center text-white">

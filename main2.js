@@ -74,6 +74,8 @@ const divisasDB = [
   },
 ];
 
+const amount = document.querySelector("#amount");
+
 const solicitarDatos = () => {
   const opciones = [];
   const divisa1 = prompt("Escriba la divisa origen:").toLowerCase();
@@ -93,7 +95,7 @@ const convert = (datosConvert) => {
     for (const key in nombreDivisa.tipoCambio) {
       if (key == datosConvert[1]) {
         const totalConvert = nombreDivisa.tipoCambio[key] * datosConvert[2];
-        alert(`la cantidad de ${datosConvert[0]} es igual a ${totalConvert}`);
+        alert(`la cantidad de ${datosConvert[0]} es igual a ${totalConvert.toLocaleString("es-CL")}`);
       }
     }
   }
@@ -110,3 +112,7 @@ do {
     repetir = false;
   }
 } while (repetir);
+
+const captura = (){
+  amount = document.querySelector("#button_amount").value;
+}
